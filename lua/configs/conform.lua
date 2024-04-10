@@ -1,6 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
+    ts = { "eslint_d" },
   },
 
   format_on_save = {
@@ -9,4 +10,4 @@ local options = {
   },
 }
 
-require("conform").setup(options)
+return options
