@@ -16,6 +16,10 @@ M.ui = {
   nvdash = {
     load_on_startup = true,
   },
+
+  lsp = {
+    signature = false,
+  },
 }
 
 return M
