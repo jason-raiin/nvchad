@@ -6,6 +6,20 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local servers = { "html", "cssls", "tsserver", "angularls" }
 
+require("mason").setup()
+require("mason-lspconfig").setup {
+  ensure_installed = {
+    "angularls",
+    "cssls",
+    "html",
+    "jsonls",
+    "lua_ls",
+    "tailwindcss",
+    "tsserver",
+    "yamlls",
+  },
+}
+
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -14,3 +28,5 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+require("nvchad.configs.lspconfig").defaults()
