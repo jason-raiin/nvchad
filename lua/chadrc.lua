@@ -20,6 +20,11 @@ M.ui = {
   lsp = {
     signature = false,
   },
+
+  statusline = {
+    theme = "minimal",
+    separator_style = "block",
+  },
 }
 
 return M
