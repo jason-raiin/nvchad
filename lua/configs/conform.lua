@@ -4,6 +4,7 @@ local options = {
     html = { "prettierd" },
     css = { "prettierd" },
     typescript = { "eslint_d" },
+    graphql = { "prettierd" }
   },
 
   format_on_save = {

@@ -11,6 +11,7 @@ return {
       "typescript-language-server",
       "angular-language-server",
       "tailwindcss-language-server",
+      "graphql-language-service-cli",
     },
   },
 }

@@ -4,20 +4,21 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "tsserver", "angularls" }
+local servers = {
+  "angularls",
+  "cssls",
+  "graphql",
+  "html",
+  "jsonls",
+  "lua_ls",
+  "tailwindcss",
+  "tsserver",
+  "yamlls",
+}
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = {
-    "angularls",
-    "cssls",
-    "html",
-    "jsonls",
-    "lua_ls",
-    "tailwindcss",
-    "tsserver",
-    "yamlls",
-  },
+  ensure_installed = servers,
 }
 
 -- lsps with default config
