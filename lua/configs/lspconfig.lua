@@ -30,4 +30,26 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- tailwind LSP config
+local tailwind_on_attach = function(client)
+  if client.server_capabilities.colorProvider then
+    -- Attach document colour support
+    require("document-color").buf_attach(bufnr)
+  end
+end
+
+local tailwind_capabilities = vim.lsp.protocol.make_client_capabilities()
+
+-- You are now capable!
+tailwind_capabilities.textDocument.colorProvider = {
+  dynamicRegistration = true,
+}
+
+-- Lsp servers that support documentColor
+require("lspconfig").tailwindcss.setup {
+  on_attach = tailwind_on_attach,
+  capabilities = tailwind_capabilities,
+}
+
+-- NvChad LSP configs
 require("nvchad.configs.lspconfig").defaults()
