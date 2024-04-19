@@ -11,7 +11,7 @@ return {
         ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
       },
       signature = {
-        enabled = false,
+        enabled = true,
       },
     },
     -- you can enable a preset for easier configuration
