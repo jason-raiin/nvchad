@@ -12,13 +12,14 @@ local servers = {
   "jsonls",
   "lua_ls",
   "tailwindcss",
+  "terraformls",
   "tsserver",
   "yamlls",
 }
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = servers,
+  automatic_installation = true
 }
 
 -- lsps with default config
@@ -34,7 +35,7 @@ end
 local tailwind_on_attach = function(client)
   if client.server_capabilities.colorProvider then
     -- Attach document colour support
-    require("document-color").buf_attach(bufnr)
+    require("document-color").buf_attach()
   end
 end
 

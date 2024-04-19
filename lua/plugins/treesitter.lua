@@ -2,8 +2,10 @@ return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {
+      "angular",
       "bash",
       "c",
+      "css",
       "diff",
       "html",
       "graphql",
@@ -19,6 +21,7 @@ return {
       "python",
       "query",
       "regex",
+      "terraform",
       "toml",
       "tsx",
       "typescript",
