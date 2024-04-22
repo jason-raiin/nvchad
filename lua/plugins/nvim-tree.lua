@@ -4,5 +4,9 @@ return {
     view = {
       adaptive_size = true,
     },
+    filters = {
+      dotfiles = false,
+      git_ignored = false,
+    },
   },
 }
