@@ -7,7 +7,7 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
-map("t", "<C-i>", "<C-\\><C-N>")
+map("t", "<M-q>", "<C-\\><C-N>")
 map("t", "<C-h>", "<C-\\><C-N><C-w>h")
 map("t", "<C-j>", "<C-\\><C-N><C-w>j")
 map("t", "<C-k>", "<C-\\><C-N><C-w>k")
