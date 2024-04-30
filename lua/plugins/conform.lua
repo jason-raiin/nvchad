@@ -1,6 +1,13 @@
 return {
   "stevearc/conform.nvim",
-  -- event = { "BufWritePre" },
-  cmd = { "ConformInfo " },
-  opts = require "configs.conform",
+  cmd = { "ConformInfo" },
+  opts = {
+    formatters_by_ft = {
+      lua = { "stylua" },
+      html = { "prettierd" },
+      css = { "prettierd" },
+      typescript = { "eslint_d", "prettierd" },
+      graphql = { "prettierd" }
+    }
+  }
 }
