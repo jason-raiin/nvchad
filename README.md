@@ -1,2 +1,2 @@
-# starter
-Starter config for NvChad
+# My Config  
+Jason's Neovim config based off NvChad
