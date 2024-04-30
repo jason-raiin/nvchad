@@ -15,8 +15,6 @@ local lazy_config = require "configs.lazy"
 
 -- load plugins
 require("lazy").setup({ import = "plugins" }, lazy_config)
-require "configs.lspconfig"
-require "configs.tailwind-tools"
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")

@@ -12,4 +12,7 @@ return {
       enabled = true,
     },
   },
+  init = function ()
+    require "configs.tailwind-tools"
+  end
 }
