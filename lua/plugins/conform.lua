@@ -5,10 +5,10 @@ return {
     opts = {
       formatters_by_ft = {
         lua = { "stylua" },
-        html = { "prettierd" },
-        css = { "prettierd" },
-        typescript = { { "eslint_d", "prettierd" } },
-        graphql = { "prettierd" }
+        html = { "prettier" },
+        css = { "prettier" },
+        typescript = { "prettier" },
+        graphql = { "prettier" }
       }
     }
   },
