@@ -7,6 +7,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "angularls",
   "cssls",
+  "eslint",
   "graphql",
   "html",
   "jsonls",
