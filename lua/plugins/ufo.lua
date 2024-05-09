@@ -34,6 +34,9 @@ return {
     vim.keymap.set("n", "J", ufo.peekFoldedLinesUnderCursor)
 
     ufo.setup {
+      provider_selector = function()
+        return { "treesitter", "indent" }
+      end,
       preview = {
         win_config = {
           border = { "", "─", "", "", "", "─", "", "" },
