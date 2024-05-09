@@ -32,5 +32,11 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+require("lspconfig").angularls.setup {
+  on_attach = function(client)
+    client.server_capabilities.renameProvider = false
+  end,
+}
+
 -- NvChad LSP configs
 require("nvchad.configs.lspconfig").defaults()
