@@ -32,9 +32,21 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-require("lspconfig").angularls.setup {
+lspconfig.angularls.setup {
   on_attach = function(client)
     client.server_capabilities.renameProvider = false
+  end,
+}
+
+lspconfig.eslint.setup {
+  on_attach = function(_, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      callback = function()
+        vim.cmd "EslintFixAll"
+        vim.notify("Linting...", "info", { title = "ESLint" })
+      end,
+    })
   end,
 }
 

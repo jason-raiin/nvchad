@@ -5,8 +5,8 @@ return {
     dependencies = {
       "williamboman/mason.nvim",
     },
-    init = function ()
+    init = function()
       require "configs.lspconfig"
-    end
+    end,
   },
 }
