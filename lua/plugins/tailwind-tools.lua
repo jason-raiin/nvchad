@@ -6,7 +6,7 @@ return {
   },
   opts = {
     document_color = {
-      enabled = false,
+      enabled = true,
     },
     conceal = {
       enabled = true,
