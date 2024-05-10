@@ -5,26 +5,24 @@
 local M = {}
 
 M.ui = {
-  theme = "chadracula",
-  transparency = true,
-
+  cmp = { style = "default" }, -- default/flat_light/flat_dark/atom/atom_colored
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
   },
-
-  nvdash = {
-    load_on_startup = true,
-  },
-
   lsp = {
     signature = false,
   },
-
-  statusline = {
-    theme = "minimal",
-    separator_style = "block",
+  nvdash = {
+    load_on_startup = true,
   },
+  statusline = {
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
+    separator_style = "block", -- default/round/block/arrow
+  },
+  telescope = { style = "bordered" }, -- borderless / bordered
+  theme = "chadracula-evondev",
+  transparency = true,
 }
 
 return M
