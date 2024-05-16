@@ -7,8 +7,8 @@ local M = {}
 M.ui = {
   cmp = { style = "default" }, -- default/flat_light/flat_dark/atom/atom_colored
   hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
+    Comment = { italic = true, fg = "#999999" },
+    ["@comment"] = { link = "Comment" },
   },
   lsp = {
     signature = false,
