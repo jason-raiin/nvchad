@@ -1,5 +1,17 @@
 local o = vim.opt
 
+vim.opt.listchars = {
+  eol = "",
+  space = "·",
+  tab = "",
+  leadmultispace = "",
+  extends = "",
+  precedes = "",
+  trail = "",
+  nbsp = "␣",
+}
+vim.opt.list = true
+
 -- fold based on treesitter parser
 -- o.foldenable = true
 -- o.foldmethod = "expr"
