@@ -29,3 +29,8 @@ map("n", "<leader>fm", function()
   require("conform").format { lsp_fallback = true }
   vim.cmd ":w"
 end)
+
+-- Show whitespace as chars
+map("n", "<leader>li", function()
+  vim.cmd "set list!"
+end)
