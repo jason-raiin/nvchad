@@ -2,9 +2,10 @@ local o = vim.opt
 
 vim.opt.listchars = {
   eol = "",
-  space = "·",
+  space = "",
+  multispace = "",
   tab = "",
-  leadmultispace = "",
+  leadmultispace = "",
   extends = "",
   precedes = "",
   trail = "",

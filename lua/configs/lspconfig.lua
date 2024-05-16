@@ -44,10 +44,18 @@ lspconfig.eslint.setup {
       buffer = bufnr,
       callback = function()
         vim.cmd "EslintFixAll"
-        vim.notify("Linting...", "info", { title = "ESLint" })
+        vim.notify_once("Linting...", "info", { title = "ESLint" })
       end,
     })
   end,
+}
+
+lspconfig.tsserver.setup {
+  settings = {
+    implicitProjectConfiguration = {
+      checkJs = true,
+    },
+  },
 }
 
 -- NvChad LSP configs
