@@ -4,11 +4,12 @@ return {
     cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
-        lua = { "stylua" },
-        html = { "prettier" },
         css = { "prettier" },
+        graphql = { "prettier" },
+        html = { "prettier" },
+        lua = { "stylua" },
         typescript = { "prettier" },
-        graphql = { "prettier" }
+        yaml = { "prettier" }
       }
     }
   },
