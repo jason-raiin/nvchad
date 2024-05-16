@@ -1,7 +1,4 @@
 require "nvchad.mappings"
-
--- add yours here
-
 local map = vim.keymap.set
 
 -- vim QOL
@@ -26,3 +23,9 @@ map("n", "<C-bs>", "<esc>0i <esc>0cw<bs> <esc>")
 
 -- Ctrl-s to save
 map("i", "<C-s>", "<cmd>w<cr>")
+
+-- Format and save
+map("n", "<leader>fm", function()
+  require("conform").format { lsp_fallback = true }
+  vim.cmd ":w"
+end)
