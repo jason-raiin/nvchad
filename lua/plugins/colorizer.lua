@@ -1,6 +1,6 @@
 return {
   "NvChad/nvim-colorizer.lua",
-  event = "VeryLazy",
+  event = "BufRead",
   config = function()
     require("colorizer").setup {
       user_default_options = {

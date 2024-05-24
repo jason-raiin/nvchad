@@ -1,7 +1,7 @@
 return {
   "nvim-telescope/telescope-ui-select.nvim",
   dependencies = "nvim-telescope/telescope.nvim",
-  event = "VeryLazy",
+  event = "LspAttach",
   config = function()
     local telescope = require "telescope"
     telescope.setup {

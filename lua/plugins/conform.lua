@@ -1,7 +1,6 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "VeryLazy",
     cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {

@@ -1,6 +1,6 @@
 return {
   "f-person/git-blame.nvim",
   main = "gitblame",
-  event = "VeryLazy",
-  opts = {}
+  event = "BufEnter",
+  opts = {},
 }

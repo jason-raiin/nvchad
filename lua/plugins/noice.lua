@@ -26,10 +26,26 @@ return {
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
+    {
+      "rcarriga/nvim-notify",
+      opts = {
+        background_colour = "#000000";
+        fps = 60,
+        max_width = 100,
+        max_height = 40,
+        render = "wrapped-compact",
+      },
+      keys = {
+        {
+          "<leader>fn",
+          function()
+            require("telescope").load_extension "notify"
+            vim.cmd "Telescope notify"
+          end,
+          desc = "telescope notify",
+        },
+      },
+    },
     -- required by the config
     "hrsh7th/nvim-cmp",
     "smjonas/inc-rename.nvim",

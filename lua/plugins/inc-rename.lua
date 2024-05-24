@@ -1,5 +1,6 @@
 return {
   "smjonas/inc-rename.nvim",
+  main = "inc_rename",
   keys = {
     {
       "<leader>re",
@@ -10,7 +11,5 @@ return {
       expr = true,
     },
   },
-  config = function()
-    require("inc_rename").setup()
-  end,
+  opts = {},
 }
