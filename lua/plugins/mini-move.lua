@@ -1,7 +1,10 @@
 return {
   "echasnovski/mini.move",
-  event = "BufEnter",
-  config = function()
-    require("mini.move").setup()
-  end,
+  keys = {
+    { "<M-h>", mode = {"n", "v"} },
+    { "<M-j>", mode = {"n", "v"} },
+    { "<M-k>", mode = {"n", "v"} },
+    { "<M-l>", mode = {"n", "v"} },
+  },
+  opts = {},
 }

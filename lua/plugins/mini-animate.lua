@@ -1,6 +1,7 @@
 return {
   "echasnovski/mini.animate",
-  init = function()
+  event = "VeryLazy",
+  config = function()
     -- check for mouse scroll action
     local mouse_scrolled = false
     for _, scroll in ipairs { "Up", "Down" } do
@@ -14,7 +15,7 @@ return {
     local animate = require "mini.animate"
     animate.setup {
       resize = {
-        timing = animate.gen_timing.linear { duration = 50, unit = "total" },
+        timing = animate.gen_timing.linear { duration = 100, unit = "total" },
       },
       scroll = {
         timing = animate.gen_timing.linear { duration = 100, unit = "total" },
