@@ -1,27 +1,9 @@
--- EXAMPLE
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = {
-  "angularls",
-  "cssls",
-  "eslint",
-  "graphql",
-  "html",
-  "jsonls",
-  "lua_ls",
-  "tailwindcss",
-  "terraformls",
-  "tsserver",
-  "yamlls",
-}
-
-require("mason").setup()
-require("mason-lspconfig").setup {
-  automatic_installation = true,
-}
+local servers = require "configs.lsp-servers"
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do

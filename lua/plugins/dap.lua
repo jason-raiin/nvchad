@@ -37,18 +37,15 @@ return {
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "mfussenegger/nvim-dap",
-    },
+    dependencies = "williamboman/mason.nvim",
+    event = "VeryLazy",
     cmd = { "DapInstall", "DapUninstall" },
-    init = function()
+    config = function()
       require "mason"
       require "mason-nvim-dap".setup {
         ensure_installed = {
           "js"
         },
-        automatic_installation = true
       }
     end
   },

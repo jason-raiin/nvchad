@@ -1,6 +1,6 @@
 return {
   "f-person/git-blame.nvim",
-  init = function()
-    require("gitblame").setup()
-  end,
+  main = "gitblame",
+  event = "VeryLazy",
+  opts = {}
 }

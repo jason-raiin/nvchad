@@ -1,6 +1,7 @@
 return {
   "NvChad/nvim-colorizer.lua",
-  init = function()
+  event = "VeryLazy",
+  config = function()
     require("colorizer").setup {
       user_default_options = {
         css = true,
