@@ -25,19 +25,4 @@ return {
       { "=P", "<Plug>(YankyPutBeforeFilter)", desc = "Put Before Applying a Filter" },
     },
   },
-  {
-    "chrisgrieser/cmp_yanky",
-    dependencies = {
-      "gbprod/yanky.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    event = "BufEnter",
-    config = function()
-      require("cmp").setup {
-        sources = {
-          { name = "cmp_yanky" },
-        },
-      }
-    end,
-  },
 }
