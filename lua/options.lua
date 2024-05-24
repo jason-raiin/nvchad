@@ -1,6 +1,5 @@
 local o = vim.opt
-
-vim.opt.listchars = {
+o.listchars = {
   eol = "",
   space = "",
   multispace = "",
@@ -10,7 +9,8 @@ vim.opt.listchars = {
   trail = "",
   nbsp = "␣",
 }
-vim.opt.list = true
+o.list = true
+vim.cmd "set nowrap"
 
 -- fold based on treesitter parser
 -- o.foldenable = true
