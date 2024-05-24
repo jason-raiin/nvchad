@@ -8,7 +8,6 @@ return {
         graphql = { "prettier" },
         html = { "prettier" },
         lua = { "stylua" },
-        typescript = { "prettier" },
         yaml = { "prettier" }
       }
     }
