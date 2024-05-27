@@ -6,6 +6,7 @@ local servers = {
   "html",
   "jsonls",
   "lua_ls",
+  "solidity_ls_nomicfoundation",
   "tailwindcss",
   "terraformls",
   "tsserver",
