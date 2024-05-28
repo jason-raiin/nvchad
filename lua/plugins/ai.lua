@@ -10,7 +10,9 @@ return {
     keys = {
       { "<leader>gpt", "<cmd>ChatGPT<cr>", desc = "open chat gpt" },
       { "<leader>gpc", "<cmd>ChatGPTCompleteCode<cr>", desc = "complete code with gpt" },
+      { "<leader>gpr", ":ChatGPTRun ", desc = "run chatgpt command" },
       { "gpe", "<cmd>ChatGPTEditWithInstructions<cr>", desc = "edit selection with gpt", mode = "x" },
+      { "gpr", ":ChatGPTRun", desc = "run chatgpt command", mode = "x" },
     },
     opts = {
       api_key_cmd = "pass show api/openai",
