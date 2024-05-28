@@ -7,7 +7,11 @@ return {
       "folke/trouble.nvim",
       "nvim-telescope/telescope.nvim",
     },
-    cmd = "ChatGPT",
+    keys = {
+      { "<leader>gpt", "<cmd>ChatGPT<cr>", desc = "open chat gpt" },
+      { "<leader>gpc", "<cmd>ChatGPTCompleteCode<cr>", desc = "complete code with gpt" },
+      { "gpe", "<cmd>ChatGPTEditWithInstructions<cr>", desc = "edit selection with gpt", mode = "x" },
+    },
     opts = {
       api_key_cmd = "pass show api/openai",
       openai_params = {
@@ -18,5 +22,9 @@ return {
         model = "gpt-4o",
       },
     },
+  },
+  {
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
   },
 }
