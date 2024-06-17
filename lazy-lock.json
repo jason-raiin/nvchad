@@ -61,6 +61,7 @@
   "trouble.nvim": { "branch": "dev", "commit": "8a0394ce7c38d961b355160dfc1e4ab77b9a38d7" },
   "ui": { "branch": "v2.5", "commit": "75a0044e5f4d164d93557fd49863e088f0ecf749" },
   "undotree": { "branch": "main", "commit": "eab459ab87dd249617b5f7187bb69e614a083047" },
+  "vim-exchange": { "branch": "master", "commit": "d6c1e9790bcb8df27c483a37167459bbebe0112e" },
   "which-key.nvim": { "branch": "main", "commit": "0099511294f16b81c696004fa6a403b0ae61f7a0" },
   "yanky.nvim": { "branch": "main", "commit": "73215b77d22ebb179cef98e7e1235825431d10e4" }
 }
