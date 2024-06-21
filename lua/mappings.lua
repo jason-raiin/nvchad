@@ -1,5 +1,6 @@
 require "nvchad.mappings"
 local map = vim.keymap.set
+local unmap = vim.keymap.del
 
 -- vim QOL
 map("n", ";", ":")
@@ -34,3 +35,6 @@ end, { desc = "format buffer" })
 map("n", "<leader>li", function()
   vim.cmd "set list!"
 end, { desc = "toggle whitespace chars" })
+
+-- Remove tab on right arrow in insert mode
+unmap("i", "<Right>")
