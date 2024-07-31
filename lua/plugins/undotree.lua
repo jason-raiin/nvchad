@@ -8,6 +8,7 @@ return {
         require("undotree").toggle()
         vim.cmd "vertical resize 40"
       end,
+      desc = "Toggle undotree",
     },
   },
   opts = {

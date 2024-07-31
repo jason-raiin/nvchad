@@ -38,3 +38,8 @@ end, { desc = "toggle whitespace chars" })
 
 -- Remove tab on right arrow in insert mode
 unmap("i", "<Right>")
+
+-- Open terminal
+map("n", "<leader>sh", function()
+  vim.cmd "terminal"
+end, { desc = "open new terminal buffer" })
