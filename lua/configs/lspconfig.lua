@@ -32,7 +32,7 @@ lspconfig.eslint.setup {
   end,
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   settings = {
     implicitProjectConfiguration = {
       checkJs = true,
