@@ -1,32 +1,21 @@
 return {
   {
-    "jackmort/chatgpt.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "folke/trouble.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    keys = {
-      { "<leader>gpt", "<cmd>ChatGPT<cr>", desc = "open chat gpt" },
-      { "<leader>gpc", "<cmd>ChatGPTCompleteCode<cr>", desc = "complete code with gpt" },
-      { "<leader>gpr", ":ChatGPTRun ", desc = "run chatgpt command" },
-      { "gpe", "<cmd>ChatGPTEditWithInstructions<cr>", desc = "edit selection with gpt", mode = "x" },
-      { "gpr", ":ChatGPTRun", desc = "run chatgpt command", mode = "x" },
-    },
-    opts = {
-      api_key_cmd = "pass show api/openai",
-      openai_params = {
-        model = "gpt-4o",
-        max_tokens = 4096,
-      },
-      openai_edit_params = {
-        model = "gpt-4o",
-      },
-    },
+    "github/copilot.vim",
+    event = "VeryLazy"
   },
   {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    dependencies = {
+      { "github/copilot.vim" }, -- or github/copilot.vim
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
+    opts = {
+      debug = true, -- Enable debugging
+      -- See Configuration section for rest
+    },
+    -- See Commands section for default commands if you want to lazy load on them
+    cmd = "CopilotChat",
   },
 }
