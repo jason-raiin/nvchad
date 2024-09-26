@@ -3,11 +3,11 @@ return {
   main = "inc_rename",
   keys = {
     {
-      "<leader>re",
+      "gre",
       function()
         return ":IncRename " .. vim.fn.expand "<cword>"
       end,
-      desc = "Rename LSP variable",
+      desc = "Rename variable",
       expr = true,
     },
   },

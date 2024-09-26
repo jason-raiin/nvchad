@@ -43,3 +43,9 @@ unmap("i", "<Right>")
 map("n", "<leader>sh", function()
   vim.cmd "terminal"
 end, { desc = "open new terminal buffer" })
+
+-- Add new keymaps
+map('n', 'grd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc = "Go to definition" })
+map('n', 'grD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { noremap = true, silent = true, desc = "Go to declaration" })
+map('n', 'grr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true, desc = "Show references" })
+map('n', 'gra', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true, desc = "Show code actions" })
