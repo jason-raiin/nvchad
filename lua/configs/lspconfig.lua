@@ -18,13 +18,9 @@ local angular_cmd = {
   "ngserver",
   "--stdio",
   "--tsProbeLocations",
-  table.concat({
-    "/Users/jasonhuang/.nvm/versions/node/v18.19.0/lib/node_modules/@angular/language-server",
-  }, ","),
+  table.concat({ require("secrets").ANGULAR_LS_LOCATION }, ","),
   "--ngProbeLocations",
-  table.concat({
-    "/Users/jasonhuang/.nvm/versions/node/v18.19.0/lib/node_modules/@angular/language-server",
-  }, ","),
+  table.concat({ require("secrets").ANGULAR_LS_LOCATION }, ","),
 }
 
 lspconfig.angularls.setup {
@@ -32,7 +28,7 @@ lspconfig.angularls.setup {
     client.server_capabilities.renameProvider = false
   end,
   cmd = angular_cmd,
-  on_new_config = function(new_config, new_root_dir)
+  on_new_config = function(new_config, _)
     new_config.cmd = angular_cmd
   end,
 }
