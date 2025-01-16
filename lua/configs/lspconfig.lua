@@ -53,5 +53,15 @@ lspconfig.ts_ls.setup {
   },
 }
 
+lspconfig.jdtls.setup {
+  settings = {
+    java = {
+      project = {
+        sourcePaths = { "src", "test" }
+      }
+    }
+  }
+}
+
 -- NvChad LSP configs
 require("nvchad.configs.lspconfig").defaults()

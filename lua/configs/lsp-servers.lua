@@ -4,6 +4,7 @@ local servers = {
   "eslint",
   "graphql",
   "html",
+  "jdtls",
   "jedi_language_server",
   "jsonls",
   "lua_ls",
