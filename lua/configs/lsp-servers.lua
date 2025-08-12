@@ -1,5 +1,6 @@
 local servers = {
   "angularls",
+  "clangd",
   "cssls",
   "eslint",
   "graphql",

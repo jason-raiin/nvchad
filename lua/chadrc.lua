@@ -27,7 +27,7 @@ M.lsp = {
 
 M.base46 = {
   transparency = true,
-  theme = "chadracula-evondev",
+  theme = "aquarium",
 }
 
 M.nvdash = {
